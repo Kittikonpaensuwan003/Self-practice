@@ -1,0 +1,67 @@
+// ข้อ 1
+const a = [2, "kittikon", 3, 4,  "paensuwan", true];
+
+// ความยาว
+console.log("length:", a.length); // 6
+
+// ค่าแรก
+console.log("first:", a[0]); // 2
+
+// ค่าสุดท้าย
+console.log("last:", a[a.length - 1]); // true
+
+
+
+
+ // ข้อ 2
+// 1. สร้างอาร์เรย์ ชื่อ greenFruits ผลไม้สีเขียว
+let greenFruits = ["กีวี", "แอปเปิ้ลเขียว", "มะนาว", "ฝรั่ง", "แตงโม"];
+
+// 2. เพิ่ม "มะละกอ" ที่ต้นอาร์เรย์
+greenFruits.unshift("มะละกอ");
+// unshift() คือ method ที่เพิ่มสมาชิกใหม่ไว้ต้นอาร์เรย์ (index 0)
+
+// 3. เอาผลไม้ตัวแรกออก เก็บใน firstFruit
+let firstFruit = greenFruits.shift();
+// shift() คือ method ที่เอาสมาชิกตัวแรกของอาร์เรย์ออก และคืนค่าสมาชิกนั้น
+
+// 4. กรองผลไม้ที่ชื่อยาวกว่า 5 ตัวอักษร
+let longNamedFruits = greenFruits.filter(fruit => fruit.length > 5);
+// filter() คือ method ที่เลือกสมาชิกที่ตรงเงื่อนไข (ในนี้คือชื่อยาวกว่า 5 ตัว)
+
+// 5. ตรวจสอบว่า "มะนาว" อยู่ในอาร์เรย์หรือไม่
+let hasLime = greenFruits.includes("มะนาว");
+// includes() คือ method ที่เช็คว่าค่าที่ส่งเข้าไปมีอยู่ในอาร์เรย์หรือไม่ คืน true หรือ false
+
+// แสดงผลข้อ 1-5 ทั้งหมด
+console.log("อาร์เรย์ผลไม้สีเขียว:", greenFruits); //'กีวี', 'แอปเปิ้ลเขียว', 'มะนาว', 'ฝรั่ง', 'แตงโม'
+console.log("ผลไม้ที่ถูกดึงออก:", firstFruit); // มะละกอ
+console.log("ผลไม้ชื่อยาวกว่า 5 ตัว:", longNamedFruits); // 'แอปเปิ้ลเขียว'
+console.log("มีมะนาวไหม:", hasLime); // true
+
+
+
+
+
+// ข้อ 3 
+// สร้างออบเจ็กต์ car พร้อม property และ method
+let car = {
+    brand: "BMW",           // ยี่ห้อรถ
+    model: "M3",            // รุ่นรถ
+    year: 2024,                 // ปีผลิต
+
+    // Method: ฟังก์ชันที่อยู่ในออบเจ็กต์
+    getCarInfo: function() {
+        return this.year + " " + this.brand + " " + this.model;
+        // this หมายถึง object ปัจจุบัน
+    }
+};
+
+// แสดงผลทั้ง object 
+console.log(car); // brand: 'BMW', 
+                  // model: 'M3', 
+                  // year: 2024, 
+                  // getCarInfo: [Function: getCarInfo]  
+
+// เรียกใช้ method ใน object และแสดงผลข้อความ
+console.log(car.getCarInfo()); // 2024 BMW M3 
