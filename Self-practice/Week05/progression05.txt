@@ -1,0 +1,23 @@
+ใช้ chatgpt ในการอธิบายส่วนต่างๆของโค้ดที่ยังไม่ค่อยเข้าใจ
+
+ฟังก์ชันพื้นฐาน
+    รับค่า parameter - function name(a,b){ return ... }
+    ใช้ return ส่งค่ากลับ
+    ตัวอย่าง sumTwoNumbers, isEven
+
+สตริง (String)
+    split("") - reverse() - join("") ใช้กลับสตริง
+    ใช้ regex /[aeiou]/gi เพื่อนับสระ
+    toLowerCase() ก่อนเช็ค palindrome
+
+อาเรย์ (Array)
+    Math.min(...arr) หาค่าน้อยสุด
+    [...new Set(arr)] ลบค่าซ้ำ
+    reduce + recursion ทำ flatten array
+
+Recursion (ฟังก์ชันเรียกตัวเอง)
+    factorial(n) = n * factorial(n-1)
+    ใช้แก้ปัญหาซ้ำโครงสร้าง 
+
+ได้เรียนเรื่อง ES module 
+    - import/ export
